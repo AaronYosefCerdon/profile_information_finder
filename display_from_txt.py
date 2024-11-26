@@ -15,7 +15,16 @@ with open("./profile_list.txt","r") as profile_finder:
                 print(line.strip( ))
                 found = True
                 break
- 
-#Display error message when no information is found.
+# Use an if statement to display an error message when no input is found.
+    if not found:
+        print(f"No corresponding profile found for {identify_full_name}.")
+    
+    # Define a variable to ask user to search again.
+    another_find = input("\nDo you want to try searching with another name? (yes/no): ")
+    
+    # Use an if statement to end the search.
+    if another_find.lower() == "no":
+        print("Thank you for using the profile finder.")
+        
 		    
-#Ask the user if they want to repeat.
+
